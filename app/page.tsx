@@ -7,7 +7,7 @@ export default function Home() {
   const [data, setData] = useState(null);
   const [gameweeks, setGameweeks] = useState([]);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
     
