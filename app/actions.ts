@@ -17,11 +17,11 @@ interface GameweekPoints {
 }
 
 // Define the structure for the final manager data
-interface ManagerData extends GameweekPoints {
-  name: string;
-  team_name: string;
-  total: number;
-}
+// interface ManagerData extends GameweekPoints {
+//   name: string;
+//   team_name: string;
+//   total: number;
+// }
 
 
 export const getLeagueManagers = async (leagueId: string): Promise<LeagueManager[]> => {
