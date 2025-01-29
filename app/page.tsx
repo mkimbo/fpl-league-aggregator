@@ -2,6 +2,7 @@
 import { useState, FormEvent } from 'react';
 import {getLeagueTable} from './actions'
 
+
 export default function Home() {
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState(null);
@@ -12,7 +13,7 @@ export default function Home() {
     setLoading(true);
     
     const formData = new FormData(e.target as HTMLFormElement);
-    const leagueId = formData.get('leagueId');
+    const leagueId = formData.get('leagueId') ?? "1641599";
     const startGw = parseInt(formData.get('startGw') as string ?? "1");
     const endGw = parseInt(formData.get('endGw') as string ?? "38");
 
