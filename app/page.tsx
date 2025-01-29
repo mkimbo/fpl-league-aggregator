@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react';
+import { useState, FormEvent } from 'react';
 import {getLeagueTable} from './actions'
 
 export default function Home() {
@@ -7,11 +7,11 @@ export default function Home() {
   const [data, setData] = useState(null);
   const [gameweeks, setGameweeks] = useState([]);
 
-  const handleSubmit = async (e: React.SyntheticEvent) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
     
-    const formData = new FormData(e.target);
+    const formData = new FormData(e.target as HTMLFormElement);
     const leagueId = formData.get('leagueId');
     const startGw = parseInt(formData.get('startGw'));
     const endGw = parseInt(formData.get('endGw'));
