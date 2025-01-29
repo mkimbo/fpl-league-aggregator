@@ -30,7 +30,7 @@ type FormValues = z.infer<typeof formSchema>
 export default function Home() {
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState<any[] | null>(null);
-  const [gameweeks, setGameweeks] = useState([]);
+  const [gameweeks, setGameweeks] = useState<string[]>([]);
 
 
   const form = useForm<FormValues>({
