@@ -74,7 +74,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gray-100 py-8 px-4">
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-3xl font-bold mb-6">Wanyamwezi Master League Aggregator</h1>
+        <h1 className="text-3xl font-bold mb-6">FPL Table Generator</h1>
 
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 w-full ">
@@ -85,7 +85,7 @@ export default function Home() {
                     control={form.control}
                     name="leagueId"
                     render={({ field }) => (
-                      <FormItem className="flex-1 pointer-events-none">
+                      <FormItem className="flex-1 ">
                         <FormLabel>League ID</FormLabel>
                         <FormControl>
                           <Input {...field} />

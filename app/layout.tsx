@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Wanyamwezi Master League",
+  title: "FPL Mini-League Table Generator",
   description: "May the best team win",
 };
 
