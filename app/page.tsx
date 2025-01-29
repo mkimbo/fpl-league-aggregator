@@ -36,7 +36,7 @@ export default function Home() {
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      leagueId: "1641599",
+      leagueId: "",
     },
   })
 
