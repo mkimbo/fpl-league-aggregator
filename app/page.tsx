@@ -132,7 +132,7 @@ export default function Home() {
 
         {loading && (
           <div className="text-center text-gray-600 mt-10">
-            Loading data...
+            Generating Table...
           </div>
         )}
 

@@ -89,8 +89,9 @@ export const getLeagueTable = async (data: { leagueId: string, startGw: number, 
       
       history.forEach(gw => {
         if (gw.event >= startGw && gw.event <= endGw) {
-          gwPoints[`GW${gw.event}`] = gw.points;
-          total += gw.points;
+          const netPoints = gw.points - gw.event_transfers_cost;
+          gwPoints[`GW${gw.event}`] = netPoints;
+          total += netPoints;
         }
       });
       
