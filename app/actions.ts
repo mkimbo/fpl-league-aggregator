@@ -3,6 +3,7 @@
 interface ManagerHistory {
   event: number;
   points: number;
+  event_transfers_cost: number;
 }
 
 interface LeagueManager {
