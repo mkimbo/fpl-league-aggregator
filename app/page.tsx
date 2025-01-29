@@ -63,7 +63,7 @@ export default function Home() {
           gws.push(`GW${gw}`);
         }
         setGameweeks(gws);
-      } catch (error) {
+      } catch (error: any) {
         alert('Error fetching data: ' + error.message);
       } finally {
         setLoading(false);
@@ -131,7 +131,7 @@ export default function Home() {
        
 
         {loading && (
-          <div className="text-center text-gray-600">
+          <div className="text-center text-gray-600 mt-10">
             Loading data...
           </div>
         )}
