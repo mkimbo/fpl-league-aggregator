@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Wanyamwezi Master League Aggregator",
-  description: "Made by Jack mkimbo",
+  title: "Wanyamwezi Master League",
+  description: "May the best team win",
 };
 
 export default function RootLayout({

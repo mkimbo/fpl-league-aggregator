@@ -80,7 +80,7 @@ export default function Home() {
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 w-full ">
                 
 
-                <div className="flex flex-col md:flex-row gap-4 items-end">
+                <div className="flex flex-col md:flex-row gap-4 md:items-end">
                   <FormField
                     control={form.control}
                     name="leagueId"
