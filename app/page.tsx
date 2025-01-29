@@ -120,7 +120,7 @@ export default function Home() {
                     )}
                   />
                   <Button type="submit" className="flex-1 bg-blue-500 hover:bg-blue-600">
-                  Get Points Table
+                  Generate Table
                   </Button>
                 </div>
 
