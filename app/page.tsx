@@ -1,5 +1,5 @@
 "use client"
-import { useState, FormEvent } from 'react';
+import React, { useState } from 'react';
 import {getLeagueTable} from './actions'
 
 export default function Home() {
@@ -7,7 +7,7 @@ export default function Home() {
   const [data, setData] = useState(null);
   const [gameweeks, setGameweeks] = useState([]);
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.SyntheticEvent) => {
     e.preventDefault();
     setLoading(true);
     
