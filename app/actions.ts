@@ -47,7 +47,7 @@ export const getLeagueManagers = async (leagueId: string): Promise<LeagueManager
 }
 
 
-export const getManagerHistory = async (managerId: string): Promise<ManagerHistory[]> => {
+export const getManagerHistory = async (managerId: number): Promise<ManagerHistory[]> => {
   try {
     const response = await fetch(`https://fantasy.premierleague.com/api/entry/${managerId}/history/`, {
       method: 'GET',
