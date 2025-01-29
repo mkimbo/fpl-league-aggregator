@@ -1,5 +1,30 @@
 "use server"
-export const getLeagueManagers = async (leagueId: string): Promise<any[]> => {
+
+interface ManagerHistory {
+  event: number;
+  points: number;
+}
+
+interface LeagueManager {
+  entry: number;
+  player_name: string;
+  entry_name: string;
+}
+
+// Define a type for gameweek points that allows string keys
+interface GameweekPoints {
+  [key: string]: number;
+}
+
+// Define the structure for the final manager data
+interface ManagerData extends GameweekPoints {
+  name: string;
+  team_name: string;
+  total: number;
+}
+
+
+export const getLeagueManagers = async (leagueId: string): Promise<LeagueManager[]> => {
   try {
     const response = await fetch(`https://fantasy.premierleague.com/api/leagues-classic/${leagueId}/standings/`, {
       method: 'GET',
@@ -22,7 +47,7 @@ export const getLeagueManagers = async (leagueId: string): Promise<any[]> => {
 }
 
 
-export const getManagerHistory = async (managerId: string): Promise<any[]> => {
+export const getManagerHistory = async (managerId: string): Promise<ManagerHistory[]> => {
   try {
     const response = await fetch(`https://fantasy.premierleague.com/api/entry/${managerId}/history/`, {
       method: 'GET',
@@ -59,7 +84,7 @@ export const getLeagueTable = async (data: { leagueId: string, startGw: number, 
       const history = await getManagerHistory(manager.entry);
       
       // Calculate total points for specified gameweeks
-      let gwPoints = {};
+     const gwPoints: GameweekPoints = {};
       let total = 0;
       
       history.forEach(gw => {
