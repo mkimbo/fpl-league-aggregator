@@ -13,8 +13,8 @@ export default function Home() {
     
     const formData = new FormData(e.target as HTMLFormElement);
     const leagueId = formData.get('leagueId');
-    const startGw = parseInt(formData.get('startGw') ?? "1");
-    const endGw = parseInt(formData.get('endGw') ?? "38");
+    const startGw = parseInt(formData.get('startGw') as string ?? "1");
+    const endGw = parseInt(formData.get('endGw') as string ?? "38");
 
     try {
       const response = await getLeagueTable({ leagueId, startGw, endGw }) 
