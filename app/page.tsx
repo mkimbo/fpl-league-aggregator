@@ -1,5 +1,5 @@
 "use client"
-import { useState } from 'react';
+import { useState, FormEvent } from 'react';
 import {getLeagueTable} from './actions'
 
 export default function Home() {
