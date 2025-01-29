@@ -13,7 +13,7 @@ export default function Home() {
     setLoading(true);
     
     const formData = new FormData(e.target as HTMLFormElement);
-    const leagueId = formData.get('leagueId') ?? "1641599";
+    const leagueId = formData.get('leagueId') as string ?? "1641599";
     const startGw = parseInt(formData.get('startGw') as string ?? "1");
     const endGw = parseInt(formData.get('endGw') as string ?? "38");
 
