@@ -1,5 +1,5 @@
 "use client"
-import { useState, FormEvent } from 'react';
+import { useState } from 'react';
 import {getLeagueTable} from './actions'
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
@@ -37,8 +37,6 @@ export default function Home() {
     resolver: zodResolver(formSchema),
     defaultValues: {
       leagueId: "1641599",
-      startGameweek: "",
-      endGameweek: "",
     },
   })
 
